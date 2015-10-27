@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Hangman View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HangmanViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Guess Here" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gL3-wP-ZnC">
+                                <rect key="frame" x="233" y="58" width="134" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="134" id="7Xu-m5-17Z"/>
+                                    <constraint firstAttribute="height" constant="30" id="nrV-0w-R1k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwF-J0-BqB">
+                                <rect key="frame" x="180" y="20" width="82" height="30"/>
+                                <state key="normal" title="New Game!"/>
+                                <connections>
+                                    <action selector="newGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BIA-tx-bgL"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="60B-9u-ugp">
+                                <rect key="frame" x="180" y="144" width="240" height="271"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="IOo-H8-XDO"/>
+                                    <constraint firstAttribute="height" constant="271" id="ooi-Pa-L9s"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3g-66-AxO">
+                                <rect key="frame" x="246" y="423" width="108" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108" id="XN2-Io-353"/>
+                                </constraints>
+                                <state key="normal" title="Random Guess!"/>
+                                <connections>
+                                    <action selector="RandomGuess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fW1-EG-Jdd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHT-jR-a3D">
+                                <rect key="frame" x="235" y="103" width="131" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5F-Ff-Z3X">
+                                <rect key="frame" x="336" y="20" width="84" height="30"/>
+                                <state key="normal" title="Make Guess"/>
+                                <connections>
+                                    <action selector="guess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hCd-Y5-Oqy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="60B-9u-ugp" firstAttribute="top" secondItem="K5F-Ff-Z3X" secondAttribute="bottom" constant="94" id="04U-z3-fr3"/>
+                            <constraint firstItem="gL3-wP-ZnC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="04q-h4-afC"/>
+                            <constraint firstItem="60B-9u-ugp" firstAttribute="top" secondItem="gL3-wP-ZnC" secondAttribute="bottom" constant="56" id="0Ou-nr-1SN"/>
+                            <constraint firstItem="60B-9u-ugp" firstAttribute="top" secondItem="LHT-jR-a3D" secondAttribute="bottom" constant="20" id="BSU-MO-avw"/>
+                            <constraint firstItem="H3g-66-AxO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ciu-8d-bxo"/>
+                            <constraint firstItem="60B-9u-ugp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ILP-s6-Lq0"/>
+                            <constraint firstItem="K5F-Ff-Z3X" firstAttribute="leading" secondItem="pwF-J0-BqB" secondAttribute="trailing" constant="74" id="OR6-2r-nr1"/>
+                            <constraint firstItem="LHT-jR-a3D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PUa-RO-TKu"/>
+                            <constraint firstItem="60B-9u-ugp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="124" id="TTs-99-US6"/>
+                            <constraint firstItem="60B-9u-ugp" firstAttribute="top" secondItem="pwF-J0-BqB" secondAttribute="bottom" constant="94" id="TuY-hx-sPK"/>
+                            <constraint firstItem="60B-9u-ugp" firstAttribute="leading" secondItem="pwF-J0-BqB" secondAttribute="trailing" constant="-82" id="UGG-zu-f08"/>
+                            <constraint firstItem="H3g-66-AxO" firstAttribute="top" secondItem="60B-9u-ugp" secondAttribute="bottom" constant="8" id="xs8-Dq-rpg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Guess" destination="gL3-wP-ZnC" id="pj4-ow-aNe"/>
+                        <outlet property="currentProgress" destination="LHT-jR-a3D" id="aEd-po-Qou"/>
+                        <outlet property="myImageView" destination="60B-9u-ugp" id="yfK-ZP-FLN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="564" y="331"/>
+        </scene>
+    </scenes>
+</document>
